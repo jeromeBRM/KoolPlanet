@@ -1,33 +1,43 @@
 <?php
 
-if (isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["email"]) && isset($_POST["confirmation"])){
+$data = array (
+    "form_complete" => isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["email"]) && isset($_POST["confirmation"]),
+    "result" => ""
+);
+
+if ($data["form_complete"]){
 
     // l'utilisateur a correctement saisi le formulaire
 
-    $login = $_POST["login"];
-    $password = $_POST["password"];
-    $email = $_POST["email"];
-    $confirmation = $_POST["confirmation"];
+    $data["login"] = $_POST["login"];
+    $data["password"] = $_POST["password"];
+    $data["email"] = $_POST["email"];
+    $data["confirmation"] = $_POST["confirmation"];
 
-    if ($password == $confirmation){
+    unset($_POST);
+
+    if ($data["password"] == $data["confirmation"]){
+
+        $hashedPassword = password_hash($data["password"], PASSWORD_DEFAULT);
 
         // l'utilisateur a correctement saisi son mot de passe
 
         global $pdo;
 
-        $sql = $pdo->prepare(
-            'INSERT INTO User VALUES (?, ?, ?)'
-            );
-        $sql->execute(array($login, $email, $password));
-
-        echo "vous êtes inscrit !";
+        try{
+            $sql = $pdo->prepare(
+                'INSERT INTO User VALUES (?, ?, ?)'
+                );
+            $sql->execute(array($data["login"], $data["email"], $hashedPassword));
+            $data["result"] = "Vous êtes inscrit !";
+        }
+        catch (\PDOException $e){
+            $data["result"] = $e->getMessage();
+        }
     }
     else{
-        echo "veuillez confirmer votre mot de passe";
+        $data["result"] = "Les mots de passe renseignés ne correspondent pas !";
     }
 }
-
-$data = array (
-);
 
 render("signup", $data);

@@ -7,8 +7,8 @@ $sql = $pdo->query("SELECT * FROM User");
 $users = $sql->fetchAll();
 
 $data = array (
-    "user_list"=>$users,
-    "user_total"=>$total["c"]
+    "user_list" => $users,
+    "user_total" => $total["c"]
 );
 
 render("home", $data);
