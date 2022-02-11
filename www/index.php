@@ -2,9 +2,15 @@
 
 session_start();
 
-$pdo = new PDO('sqlite:'.__DIR__.'/db/main.sqlite');
-$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+try{
+	$pdo = new PDO('sqlite:'.__DIR__.'/db/main.sqlite');
+	$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
+}
+catch (\PDOException $e){
+	echo $e->getMessage();
+	exit(1);
+}
 
 function render($view) {
 	ob_start();
