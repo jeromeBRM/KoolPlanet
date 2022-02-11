@@ -27,4 +27,7 @@ if(isset($_GET["action"])){
 	$action = "home";
 }
 
+$data["pdo"] = $pdo;
+$data["login_message"] = isset($_SESSION["login"]) ? "Vous êtes connecté(e) sur le compte de " . $_SESSION["login"] . "." : "";
+
 require("controllers/".$action."Controller.php");

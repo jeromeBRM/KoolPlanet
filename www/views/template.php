@@ -15,7 +15,7 @@
                     <li><a href="?action=signup">S'inscrire</a></li>
                     <li><a href="">Se déconnecter</a></li>
                 </ul>
-                <h5 class="header__info--login"><?= "Vous êtes connecté(e) sur le compte de " . $_SESSION["login"]; ?></h5>
+                <h5 class="header__info--login"><?= $data["login_message"] ?></h5>
             </nav>
         </header>
             <?= $content ?>

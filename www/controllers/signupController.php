@@ -1,13 +1,9 @@
 <?php
 
-$data = array (
-    "form_complete" => isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["email"]) && isset($_POST["confirmation"]),
-    "result" => ""
-);
+$data["form_complete"] = isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["email"]) && isset($_POST["confirmation"]);
+$data["result"] = "";
 
 if ($data["form_complete"]){
-
-    // l'utilisateur a correctement saisi le formulaire
 
     $data["login"] = $_POST["login"];
     $data["password"] = $_POST["password"];
@@ -20,12 +16,8 @@ if ($data["form_complete"]){
 
         $hashedPassword = password_hash($data["password"], PASSWORD_DEFAULT);
 
-        // l'utilisateur a correctement saisi son mot de passe
-
-        global $pdo;
-
         try{
-            $sql = $pdo->prepare(
+            $sql = $data["pdo"]->prepare(
                 'INSERT INTO User VALUES (?, ?, ?)'
                 );
             $sql->execute(array($data["login"], $data["email"], $hashedPassword));

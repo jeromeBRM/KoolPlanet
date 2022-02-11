@@ -1,11 +1,9 @@
 <?php
 
-$data = array (
-    "connected" => false,
-    "login" => "",
-    "password" => "",
-    "result" => ""
-);
+$data["connected"] = false;
+$data["login"] = "";
+$data["password"] = "";
+$data["result"] = "";
 
 if (isset($_POST["login"]) && isset($_POST["password"])){
 
@@ -14,7 +12,7 @@ if (isset($_POST["login"]) && isset($_POST["password"])){
 
     unset($_POST);
 
-    $sql = $pdo->prepare(
+    $sql = $data["pdo"]->prepare(
         'SELECT Login, Password FROM User WHERE Login = ? LIMIT 1'
         );
     $sql->execute(array($data["login"]));
