@@ -3,9 +3,11 @@
 <p>Coucou ! Voici la liste des utilisateurs :</p>
 
 <?php
-$sql = $PDO ->query"SELECT * FROM users");
-$user = $sql ->FetchAll()
+
+global $pdo;
+
+$sql = $pdo->query("SELECT * FROM User");
+$users = $sql ->FetchAll();
 foreach($users as $user){
-		print_r($user);
-		echo PHP_SQL;
+	echo $user["Login"];
 }
