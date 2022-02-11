@@ -1,4 +1,7 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
+}
+if (!isset($_POST["login"] || !isset($_POST["password"])))
 
 $data = array (
     "connected" => false,
@@ -11,28 +14,4 @@ $data = array (
 // SELECT DISTINCT Login FROM User WHERE Login = login;
 
 
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-	if ($_POST["login"] !== "babar") {
-		echo "wrong login";
-	}
-	
-	if ($_POST["password"] !== "celeste") {
-		echo "wrong password";
-	}
-	
-	echo "ok";
-} else {
-
-}
-    
-echo '$_SERVER=';
-print_r($_SERVER);
-echo '$_POST=';
-print_r($_POST);
-echo '$_GET=';
-print_r($_GET);
-
-
 render("login", $data);
-

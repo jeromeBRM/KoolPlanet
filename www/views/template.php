@@ -9,11 +9,12 @@
     <body>
         <header>
             <nav>
-                <a class="list-unstyled" href="?action=home"><h1>KoolPlanet</h1></a>
+                <a class="header__hero--unstyled" href="?action=home"><h1>KoolPlanet</h1></a>
                 <ul>
                     <li><a href="?action=login">Se connecter</a></li>
                     <li><a href="?action=signup">S'inscrire</a></li>
                 </ul>
+                <h5 class="header__info--login"></h5>
             </nav>
         </header>
             <?= $content ?>
