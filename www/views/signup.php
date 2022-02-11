@@ -1,5 +1,5 @@
 <form method = "POST" action = '?action=signup'>
-	<h1> Formulaire d'inscription
+	<h1> Inscription
 		<h3> Email
 			<input type = "email" name = "email">
 		</h3>
