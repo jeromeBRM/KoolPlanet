@@ -1,6 +1,11 @@
-<h1>Login Form</h1>
 <form method="POST" action="?action=login">
-	<input type="text" name="login">
-	<input type="password" name="password">
+	<h1>Connection
+		<h3> Login
+			<input type="text" name="login">
+		</h3>
+		<h3> Passeword
+			<input type="password" name="password">
+		</h3>
+	</h1>
 	<input type="submit">
 </form>

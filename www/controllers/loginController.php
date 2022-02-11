@@ -1,7 +1,7 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] != "POST") {
+/*if ($_SERVER["REQUEST_METHOD"] != "POST") {
     exit(1);
-}
+}*/
 if (!isset($_POST["login"]) || !isset($_POST["password"]))
 
 

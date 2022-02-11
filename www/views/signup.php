@@ -52,7 +52,7 @@ else{
 			<input type = "password" name = "confirmation">
 		</h3>
 	</h1>	
-<input type = "submit">
+    <input type = "submit">
 </form>
 <?php } ?>
 
