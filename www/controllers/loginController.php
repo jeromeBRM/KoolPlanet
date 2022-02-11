@@ -23,6 +23,8 @@ if (isset($_POST["login"]) && isset($_POST["password"])){
 
     if($user != null){
         if (password_verify($data["password"], $user["Password"])){
+            $_SESSION["login"] = $data["login"];
+            $data["connected"] = true;
             $data["result"] = "Vous êtes connecté(e).";
         }
         else{
