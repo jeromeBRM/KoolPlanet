@@ -5,7 +5,6 @@
 <ul>
 
 <?php
-
 global $pdo;
 
 $sql = $pdo->query("SELECT * FROM User");
