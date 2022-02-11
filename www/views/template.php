@@ -8,11 +8,13 @@
     </head>
     <body>
         <header>
-            <a class="list-unstyled" href="?action=home"><h1>KoolPlanet</h1></a>
-            <ul>
-            <li><a href="?action=login">Se connecter</a></li>
-            <li><a href="?action=signup">S'inscrire</a></li>
-            </ul>
+            <nav>
+                <a class="list-unstyled" href="?action=home"><h1>KoolPlanet</h1></a>
+                <ul>
+                    <li><a href="?action=login">Se connecter</a></li>
+                    <li><a href="?action=signup">S'inscrire</a></li>
+                </ul>
+            </nav>
         </header>
             <?= $content ?>
         <footer>
