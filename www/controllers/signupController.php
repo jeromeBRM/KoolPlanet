@@ -18,7 +18,7 @@ if ($data["form_complete"]){
 
         try{
             $sql = $data["pdo"]->prepare(
-                'INSERT INTO User VALUES (?, ?, ?)'
+                'INSERT INTO kp_user VALUES (?, ?, ?)'
                 );
             $sql->execute(array($data["login"], $data["email"], $hashedPassword));
             $data["result"] = "Vous êtes inscrit !";

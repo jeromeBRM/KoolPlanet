@@ -1,9 +1,9 @@
 <?php
 
-$sql = $data["pdo"]->query("SELECT DISTINCT Count(Login) as c FROM User");
+$sql = $data["pdo"]->query("SELECT DISTINCT Count(login) as c FROM kp_user");
 $total = $sql->fetch();
 
-$sql = $data["pdo"]->query("SELECT * FROM User");
+$sql = $data["pdo"]->query("SELECT * FROM kp_user");
 $users = $sql->fetchAll();
 
 $data["user_list"] = $users;

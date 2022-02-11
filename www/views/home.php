@@ -6,7 +6,7 @@
 <ul>
     <?php foreach($data["user_list"] as $user){ ?>
         <li>
-            <?php echo $user["Login"]; ?>
+            <?php echo $user["login"]; ?>
         </li>
     <?php } ?>
 </ul>

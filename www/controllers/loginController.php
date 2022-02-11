@@ -13,14 +13,14 @@ if (isset($_POST["login"]) && isset($_POST["password"])){
     unset($_POST);
 
     $sql = $data["pdo"]->prepare(
-        'SELECT Login, Password FROM User WHERE Login = ? LIMIT 1'
+        'SELECT login, password FROM kp_user WHERE login = ? LIMIT 1'
         );
     $sql->execute(array($data["login"]));
 
     $user = $sql->fetch();
 
     if($user != null){
-        if (password_verify($data["password"], $user["Password"])){
+        if (password_verify($data["password"], $user["password"])){
             $_SESSION["login"] = $data["login"];
             $data["connected"] = true;
             $data["result"] = "Vous êtes connecté(e).";
