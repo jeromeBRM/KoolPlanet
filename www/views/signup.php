@@ -15,15 +15,5 @@
 			<input type = "password" name = "confirmation">
 		</h3>
 	</h1>	
-<<<<<<< Updated upstream
     <input type = "submit">
 </form>
-<?php } ?>
-
-<?php if (isset ($err)) { ?>
-<p> <?php echo $err ; ?> </p>
-<?php } ?>
-=======
-<input type = "submit">
-</form>
->>>>>>> Stashed changes
