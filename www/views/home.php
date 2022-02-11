@@ -1,5 +1,6 @@
 <p>Bienvenue</p>
 
+<p>Nombre d'utilisateurs inscrits : (2)</p>
 <p>Coucou ! Voici la liste des utilisateurs :</p>
 
 <ul>
