@@ -1,3 +1,6 @@
 <?php
 
-render("login");
+$data = array (
+);
+
+render("login", $data);

@@ -1,20 +1,14 @@
 <?php
 
-render("home");
-
-$sql = $pdo->query("SELECT DISTINCT Count(Login) as c FROM User 
-");
- $users = $sql->fetch();
-echo $users["c"]; 
+$sql = $pdo->query("SELECT DISTINCT Count(Login) as c FROM User");
+$total = $sql->fetch();
 
 $sql = $pdo->query("SELECT * FROM User");
 $users = $sql->fetchAll();
-foreach($users as $user){
 
+$data = array (
+    "user_list"=>$users,
+    "user_total"=>$total["c"]
+);
 
-?>
-<li>
-    <?php echo $user["Login"]; ?>
-</li>
-<?php
-}
+render("home", $data);

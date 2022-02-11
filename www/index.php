@@ -12,7 +12,7 @@ catch (\PDOException $e){
 	exit(1);
 }
 
-function render($view) {
+function render($view, $data) {
 	ob_start();
 	require("views/$view.php");
 	$content = ob_get_contents();

@@ -1,3 +1,6 @@
 <?php
 
-render("signup");
+$data = array (
+);
+
+render("signup", $data);
