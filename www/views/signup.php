@@ -11,7 +11,7 @@
 			<input type = "password" name = "password">
 		</h3>
 
-		<h3> Confirmation Passeword
+		<h3> Confirmation Password
 			<input type = "password" name = "confirmation">
 		</h3>
 	</h1>	

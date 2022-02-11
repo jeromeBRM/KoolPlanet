@@ -3,7 +3,7 @@
 		<h3> Login
 			<input type="text" name="login">
 		</h3>
-		<h3> Passeword
+		<h3> Password
 			<input type="password" name="password">
 		</h3>
 	</h1>
