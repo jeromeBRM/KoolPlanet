@@ -8,9 +8,7 @@ $data = array (
 
 // 1 ere requete sql qui cherche l'uilisateur login
 
-// SELECT * FROM User
-
-// deuxieme requete sql qui verifie si le mdp renseigné edt bien celui corresopndant au login
+// SELECT DISTINCT Login FROM User WHERE Login = login;
 
 
 
