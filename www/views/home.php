@@ -19,9 +19,18 @@
         </li>
     <?php } ?>
 
-    <form>
-    // titre + contenue avec un bouton return le formulaire avec le new contenue
-    </form>
+    <form method = "POST" action = '?action=home'>
+	<h1> Topic
+		<h3> Titre du Poste
+			<input type = "text" name = "post_title">
+		</h3>
+		<h3> Contenue du poste
+			<input type = "text" name = "post_content">
+		</h3>
+	</h1>	
+    <input type = "submit">
+    <p><?php echo $data["result"]; ?></p>
+</form>
 
 </ul>
 
