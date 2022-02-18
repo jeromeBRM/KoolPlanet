@@ -29,9 +29,7 @@
 		</h3>
 	</h1>	
     <input type = "submit">
-    <p><?php echo $data["result"]; ?></p>
+    <p><?= $data["result"]; ?></p>
 </form>
 
 </ul>
-
-
