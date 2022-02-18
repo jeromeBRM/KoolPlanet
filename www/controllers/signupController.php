@@ -17,7 +17,7 @@ if ($data["form_complete"]){
         $hashedPassword = password_hash($data["password"], PASSWORD_DEFAULT);
 
         try{
-            $sql = $data["pdo"]->prepare(
+            $sql = $db->prepare(
                 'INSERT INTO kp_user VALUES (?, ?, ?)'
                 );
             $sql->execute(array($data["login"], $data["email"], $hashedPassword));
