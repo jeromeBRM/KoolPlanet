@@ -24,7 +24,7 @@
 		<h3> Titre du Poste
 			<input type = "text" name = "post_title">
 		</h3>
-		<h3> Contenue du poste
+		<h3> Contenu du poste
 			<input type = "text" name = "post_content">
 		</h3>
 	</h1>	
