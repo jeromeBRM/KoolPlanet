@@ -12,10 +12,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         try{
             $sql = $db->prepare(
-                'insert into `post` values (null, ?, ?, ?, ?)'
+                'insert into `topic` values (null, ?, ?, ?)'
                 );
-            $sql->execute(array(null, $data["post_title"], $data["post_content"], 0, 0));
-            $data["result"] = "Le post a été créé !";
+            $sql->execute(array(0, $data["post_content"], date(DATE_ATOM, mktime(date('n',time()), date('j',time()), date('Y',time())))));
+            
+            $lastId = $db->lastInsertId();
+
+            $data["result"] = "Le post a été créé !". $lastId;
         }
         catch (\PDOException $e){
             $data["result"] = $e->getMessage();
@@ -28,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 unset($_POST);
 
-$sql = $db->query("select id, content from `post`");
+$sql = $db->query("select id, content, posted_at from `topic`");
 $posts = $sql->fetchAll();
 
 $data["post_list"] = $posts;
