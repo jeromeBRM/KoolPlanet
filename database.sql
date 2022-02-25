@@ -8,6 +8,7 @@ create table user (
 create table topic(
     id integer,
     author_id integer not null,
+    title text not null,
     content text not null,
     posted_at datetime not null,
     constraint pk_post primary key (id),

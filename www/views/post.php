@@ -3,20 +3,20 @@
     <?php foreach ($data["post_list"] as $post){ ?>
         <li>
             <a href="?action=post&id=<?= $post["id"] ?>">
-                <h3><?= $post["content"] ?></h3>
-                <p><?= $post["posted_at"]; ?></p>
+                <h3><?= $post["title"]; ?></h3>
             </a>
+            <p><?= $post["posted_at"]; ?></p>
         </li>
     <?php } ?>
 </ul>
 
 <div>
     <form method = "POST" action = '?action=post'>
-        <h1> Topic
-            <h3> Titre du Poste
+        <h1> Créer un nouveau topic
+            <h3> Titre du topic
                 <input type = "text" name = "post_title">
             </h3>
-            <h3> Contenu du poste
+            <h3> Contenu du topic
                 <input type = "text" name = "post_content">
             </h3>
         </h1>	
