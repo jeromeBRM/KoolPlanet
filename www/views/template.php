@@ -11,10 +11,10 @@
             <nav>
                 <a class="header__hero--unstyled" href="?action=home"><h1>KoolPlanet</h1></a>
                 <ul>
+                    <li><a href="?action=post">Topic</a></li>
                     <li><a href="?action=login">Se connecter</a></li>
                     <li><a href="?action=signup">S'inscrire</a></li>
                     <li><a href="?action=logout">Se déconnecter</a></li>
-                    <li><a href="?action=post">Topic</a></li>
                 </ul>
                 <h5 class="header__info--login"><?= isset($_SESSION["login"]) ? "Vous êtes connecté(e) sur le compte de " . $_SESSION["login"] . "." : ""; ?></h5>
             </nav>

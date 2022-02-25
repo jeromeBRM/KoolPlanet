@@ -1,7 +1,7 @@
 <form method = "POST" action = '?action=signup'>
 	<h1> Inscription
 		<h3> Email
-			<input type = "email" name = "email">
+			<input type = "email" name = "mail">
 		</h3>
 		<h3> Login
 			<input type = "text" name = "login">
