@@ -4,10 +4,9 @@
 <p>Voici la liste des utilisateurs :</p>
 
 <ul>
-    <?php foreach($data["user_list"] as $user){ ?>
+    <?php foreach($data["username_list"] as $user){ ?>
         <li>
             <?= $user["login"]; ?>
         </li>
     <?php } ?>
 </ul>
-

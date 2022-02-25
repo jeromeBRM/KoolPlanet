@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 unset($_POST);
 
-$sql = $db->query("select id, title from `post`");
+$sql = $db->query("select id, content from `post`");
 $posts = $sql->fetchAll();
 
 $data["post_list"] = $posts;

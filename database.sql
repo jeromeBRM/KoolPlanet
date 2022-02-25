@@ -2,6 +2,7 @@ create table user (
     id integer auto_increment,
     login varchar(30) not null,
     password text not null,
+    mail varchar(255) not null,
     constraint pk_user primary key (id)
 );
 
