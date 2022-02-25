@@ -2,7 +2,7 @@
 <ul>
     <?php foreach ($data["post_list"] as $post){ ?>
         <li>
-            <a href="?action=post&id=<?= $post["id"]?>"><h4><?= $post["title"]; ?></h4></a>
+            <a href="?action=post&id=<?= $post["id"]?>"><h4><?= $post["content"]; ?></h4></a>
         </li>
     <?php } ?>
 </ul>

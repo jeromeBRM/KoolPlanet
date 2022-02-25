@@ -1,5 +1,6 @@
 <?php
 
+$data["form_complete"] = isset($_POST["post_title"]) && isset($_POST["post_content"]);
 $data["result"] = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -11,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         try{
             $sql = $db->prepare(
-                'insert into `post` values (?, ?, ?, ?, ?)'
+                'insert into `post` values (null, ?, ?, ?, ?)'
                 );
             $sql->execute(array(null, $data["post_title"], $data["post_content"], 0, 0));
             $data["result"] = "Le post a été créé !";

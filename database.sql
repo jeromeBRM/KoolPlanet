@@ -8,9 +8,11 @@ create table user (
 
 create table post(
     id integer auto_increment,
+    author_id integer not null,
     content text not null,
     posted_at datetime not null,
-    constraint pk_post primary key (id)
+    constraint pk_post primary key (id),
+    foreign key (author_id) references user(id)
 );
 
 create table article(
@@ -25,6 +27,7 @@ create table topic(
     post_id integer,
     media_id integer,
     title text not null,
+    score integer,
     foreign key (post_id) references post(id),
     foreign key (media_id) references media(id)
 );
@@ -53,7 +56,7 @@ create table profile(
 
 create table media(
     id integer auto_increment,
-    url varchar(2048) not null,
+    name text not null,
     type tinyint,
     constraint pk_media primary key (id)
 );
