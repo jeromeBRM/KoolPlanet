@@ -1,1 +1,1 @@
-<p> Vous êtes Déconnecté </p>
+<p> Vous êtes déconnecté(e) </p>

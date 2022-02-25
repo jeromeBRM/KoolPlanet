@@ -1,13 +1,12 @@
 <?php
 
-$data["form_complete"] = isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["mail"]) && isset($_POST["confirmation"]);
+$data["form_complete"] = isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["confirmation"]);
 $data["result"] = "";
 
 if ($data["form_complete"]){
 
     $data["login"] = $_POST["login"];
     $data["password"] = $_POST["password"];
-    $data["mail"] = $_POST["mail"];
     $data["confirmation"] = $_POST["confirmation"];
 
     unset($_POST);
@@ -18,9 +17,9 @@ if ($data["form_complete"]){
 
         try{
             $sql = $db->prepare(
-                'insert into `user` values (null, ?, ?, ?)'
+                'insert into `user` values (null, ?, ?)'
                 );
-            $sql->execute(array($data["login"], $hashedPassword, $data["mail"]));
+            $sql->execute(array($data["login"], $hashedPassword));
             $data["result"] = "Vous êtes inscrit !";
         }
         catch (\PDOException $e){
