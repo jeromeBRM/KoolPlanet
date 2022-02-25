@@ -1,4 +1,4 @@
-<p> Voici la liste des topics :</p>
+<p> Liste des topics :</p>
 <ul>
     <?php foreach ($data["post_list"] as $post){ ?>
         <li>
