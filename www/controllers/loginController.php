@@ -13,7 +13,7 @@ if (isset($_POST["login"]) && isset($_POST["password"])){
     unset($_POST);
 
     $sql = $db->prepare(
-        'SELECT login, password FROM kp_user WHERE login = ? LIMIT 1'
+        'select login, password from `user` where login = ? LIMIT 1'
         );
     $sql->execute(array($data["login"]));
 

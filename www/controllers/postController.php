@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         try{
             $sql = $db->prepare(
-                'INSERT INTO kp_post VALUES (?, ?, ?, ?, ?)'
+                'insert into `post` values (?, ?, ?, ?, ?)'
                 );
             $sql->execute(array(null, $data["post_title"], $data["post_content"], 0, 0));
             $data["result"] = "Le post a été créé !";
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 unset($_POST);
 
-$sql = $db->query("SELECT id, title FROM kp_post");
+$sql = $db->query("select id, title from `post`");
 $posts = $sql->fetchAll();
 
 $data["post_list"] = $posts;

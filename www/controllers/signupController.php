@@ -18,7 +18,7 @@ if ($data["form_complete"]){
 
         try{
             $sql = $db->prepare(
-                'INSERT INTO kp_user VALUES (?, ?, ?)'
+                'insert into `user` values (?, ?, ?)'
                 );
             $sql->execute(array($data["login"], $data["email"], $hashedPassword));
             $data["result"] = "Vous êtes inscrit !";
