@@ -1,6 +1,5 @@
 <?php
 
-$data["connected"] = false;
 $data["login"] = "";
 $data["password"] = "";
 $data["result"] = "";
@@ -13,7 +12,7 @@ if (isset($_POST["login"]) && isset($_POST["password"])){
     unset($_POST);
 
     $sql = $db->prepare(
-        'select login, password from `user` where login = ? LIMIT 1'
+        'select id, login, password from `user` where login = ? LIMIT 1'
         );
     $sql->execute(array($data["login"]));
 
@@ -22,7 +21,8 @@ if (isset($_POST["login"]) && isset($_POST["password"])){
     if($user != null){
         if (password_verify($data["password"], $user["password"])){
             $_SESSION["login"] = $data["login"];
-            $data["connected"] = true;
+            $_SESSION["id"] = $user["id"];
+            $_SESSION["connected"] = true;
             $data["result"] = "Vous êtes connecté(e).";
         }
         else{

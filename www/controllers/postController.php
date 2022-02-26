@@ -7,7 +7,7 @@ if ($data["form_complete"]){
     $data["form_complete"] = $_POST["post_title"] != "" && $_POST["post_content"] != "";
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION["connected"])) {
 
     if ($data["form_complete"]){
 
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $sql = $db->prepare(
                 'insert into `topic` values (null, ?, ?, ?, ?)'
                 );
-            $sql->execute(array(0, $data["post_title"], $data["post_content"], date(DATE_ATOM, mktime(date('n',time()), date('j',time()), date('Y',time())))));
+            $sql->execute(array($_SESSION["id"], $data["post_title"], $data["post_content"], date(DATE_ATOM, mktime(date('n',time()), date('j',time()), date('Y',time())))));
             
             $lastId = $db->lastInsertId();
 

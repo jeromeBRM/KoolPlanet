@@ -10,6 +10,7 @@
     <?php } ?>
 </ul>
 
+<?php if (isset($_SESSION["connected"])){ ?>
 <div>
     <form method = "POST" action = '?action=post'>
         <h1> Topic
@@ -24,3 +25,4 @@
         <p><?= $data["result"]; ?></p>
     </form>
 </div>
+<?php } ?>
