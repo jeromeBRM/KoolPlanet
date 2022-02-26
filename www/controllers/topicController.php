@@ -3,10 +3,16 @@ $data["result"] = "";
 
 try{
     $sql = $db->prepare(
-        'select title, content, posted_at from `topic` where id = ? limit 1'
+        '
+        select login, title, content, posted_at from `topic`
+        inner join `user`
+        where `topic`.author_id = `user`.id
+        or `topic`.id = ? limit 1
+        '
         );
     $sql->execute(array($_GET["id"]));
     $topic = $sql->fetch();
+
 }
 catch (\PDOException $e){
     $data["result"] = $e->getMessage();
