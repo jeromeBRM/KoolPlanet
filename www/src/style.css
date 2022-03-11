@@ -9,10 +9,13 @@ html{
 body {
     font-family: 'Rubik', sans-serif;
     color: var(--color-text-primary);
+    margin: 0%;
 }
 
-h1,h5{
-    font-size: 36px;
+h1{
+    text-align: center;
+    font-size: 45px;
+    color: var(--color-text);
 }
 
 h3{
@@ -27,7 +30,11 @@ a{
 li{
     list-style: none;
 }
-
+.banner__cover{
+    background-image: url("../images/foret.jpg");
+    background-size: cover;
+    padding: 10px;
+}
 
 button{
     background: #54e695;
@@ -36,6 +43,7 @@ button{
     padding: 10px 24px;
     text-align: center;
     border-radius: 30px;
+    font-family: 'Rubik';
 }
 
 button a {

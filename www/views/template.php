@@ -13,18 +13,19 @@
     <body>
         <header>
             <nav>
-                <a href="?action=home"><h1>KoolPlanet</h1></a>
-                <ul class ="container">
-                    <button><a href="?action=post">Liste des sujets</a></button>
-                    <?php if(!isset($_SESSION["login"])) { ?>
-                        <button><a href="?action=signup">S'inscrire</a></button>
-                        <button><a href="?action=login">Se connecter</a></button>
-                    <?php } ?>
-                    <?php if(isset($_SESSION["login"])) { ?>
-                        <button><a href="?action=logout">Se déconnecter</a></button>
-                    <?php } ?>
-                </ul>
-                <h4><?= isset($_SESSION["login"]) ? "Vous êtes connecté(e) sur le compte de " . $_SESSION["login"] . "." : ""; ?></h4>
+                <div class = "banner__cover"><a href="?action=home"><h1>KoolPlanet</h1></a>
+                    <ul class ="container">
+                        <button><a href="?action=post">Liste des sujets</a></button>
+                        <?php if(!isset($_SESSION["login"])) { ?>
+                            <button><a href="?action=signup">S'inscrire</a></button>
+                            <button><a href="?action=login">Se connecter</a></button>
+                        <?php } ?>
+                        <?php if(isset($_SESSION["login"])) { ?>
+                            <button><a href="?action=logout">Se déconnecter</a></button>
+                        <?php } ?>
+                    </ul>
+                    <h4><?= isset($_SESSION["login"]) ? "Vous êtes connecté(e) sur le compte de " . $_SESSION["login"] . "." : ""; ?></h4>
+                </div>
             </nav>
         </header>
             <?= $content ?>

@@ -12,12 +12,12 @@
 <?php if (isset($_SESSION["login"])){ ?>
 <div>
     <form method = "POST" action = '?action=post'>
-        <h1> Créer un sujet de discussion
+        <h2> Créer un sujet de discussion
             <h3>Titre</h3>
             <input type = "text" name = "post_title">
             <h3>Message</h3>
             <textarea type = "text" name = "post_content"></textarea>
-        </h1>	
+        </h2>	
         <input type = "submit">
         <p><?= $data["result"]; ?></p>
     </form>
