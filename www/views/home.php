@@ -6,8 +6,7 @@ d’une éolienne domestique, et que chaque français génère en moyenne 5 tonn
 de la dimension environnementale du développement durable. Venez partager vos astuces ainsi que vos interrogations.</p>
 <p>Rejoignez le mouvement KoolPlanet !</p>
 
-<p>Nombre d'utilisateurs inscrits : (<?= $data["user_total"]; ?>)</p>
-<p>Voici la liste des utilisateurs :</p>
+<p>Nombre de kool : <?= $data["user_total"]; ?></p>
 <ul>
     <?php foreach($data["username_list"] as $user){ ?>
         <li>
