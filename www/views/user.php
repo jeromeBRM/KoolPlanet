@@ -1,1 +1,1 @@
-hello
+<h2>Profil de <?= $data["user"]["login"] ?></h2>

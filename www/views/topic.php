@@ -6,7 +6,7 @@
         <?= nl2br($data["topic"]["content"]) ?>
     </p>
     <div>
-        Posté par <?= $data["topic"]["login"] ?> le <?= $data["topic"]["posted_at"] ?>
+        Posté par <a href="?action=user&id=<?= $data["topic"]["id"] ?>"><?= $data["topic"]["login"] ?></a> le <?= $data["topic"]["posted_at"] ?>
     </div>
 </article>
 
@@ -16,7 +16,7 @@
         <?= nl2br($reply["content"]) ?>
     </p>
     <div>
-        Posté par <?= $reply["login"] ?> le <?= $reply["posted_at"] ?>
+        Posté par <a href="?action=user&id=<?= $reply["author_id"] ?>"><?= $reply["login"] ?></a> le <?= $reply["posted_at"] ?>
     </div>
 </article>
 <?php } ?>
