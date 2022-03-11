@@ -32,7 +32,8 @@ unset($_POST);
 try{
     $sql = $db->prepare(
         '
-        select `user`.id, login, title, content, posted_at from `topic`
+        select `user`.id, login, title, content, posted_at
+        from `topic`
         inner join `user`
         where `topic`.author_id = `user`.id
         and `topic`.id = ? limit 1
@@ -43,7 +44,8 @@ try{
 
     $sql = $db->prepare(
         '
-        select author_id, login, content, posted_at from `reply`
+        select author_id, login, content, posted_at
+        from `reply`
         inner join `user`
         where `reply`.author_id = `user`.id
         and `topic_id` = ?
