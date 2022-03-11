@@ -17,6 +17,11 @@ h1{
     font-size: 50px;
     color: var(--color-text);
 }
+h2{
+    color: #459A7D;
+    text-align: center;
+    font-size: 30px;
+}
 
 h3{
     font-size: 15px;
