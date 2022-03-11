@@ -1,7 +1,7 @@
 <article>
-    <h1>
+    <h2>
         <?= $data["topic"]["title"] ?>
-    </h1>
+    </h2>
     <p>
         <?= nl2br($data["topic"]["content"]) ?>
     </p>
