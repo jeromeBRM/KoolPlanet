@@ -10,7 +10,7 @@
     <?php } ?>
 </ul>
 
-<?php if (isset($_SESSION["connected"])){ ?>
+<?php if (isset($_SESSION["login"])){ ?>
 <div>
     <form method = "POST" action = '?action=post'>
         <h1> Créer un sujet de discussion
