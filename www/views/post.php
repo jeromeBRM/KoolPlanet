@@ -1,4 +1,4 @@
-<p> Liste des topics :</p>
+<p> Liste des sujets :</p>
 <ul>
     <?php foreach ($data["post_list"] as $post){ ?>
         <li>
@@ -13,12 +13,12 @@
 <?php if (isset($_SESSION["connected"])){ ?>
 <div>
     <form method = "POST" action = '?action=post'>
-        <h1> Topic
-            <h3> Titre du Poste
+        <h1> Créer un sujet de discussion
+            <h3> Titre
                 <input type = "text" name = "post_title">
             </h3>
-            <h3> Contenu du poste
-                <input type = "text" name = "post_content">
+            <h3> Message
+                <textarea type = "text" name = "post_content"></textarea>
             </h3>
         </h1>	
         <input type = "submit">

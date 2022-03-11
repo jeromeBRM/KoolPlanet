@@ -7,6 +7,6 @@
 			<input type="password" name="password">
 		</h3>
 	</h1>
-	<p><?php echo $data["result"]; ?></p>
+	<p><?= $data["result"]; ?></p>
 	<input type="submit">
 </form>
