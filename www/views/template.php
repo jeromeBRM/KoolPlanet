@@ -12,7 +12,7 @@
     <body>
         <header>
             <nav>
-                <a class="header__hero--unstyled" href="?action=home"><h1>KoolPlanet</h1></a>
+                <a href="?action=home"><h1>KoolPlanet</h1></a>
                 <ul>
                     <li><a href="?action=post">Liste des sujets</a></li>
                     <li><a href="?action=login">Se connecter</a></li>

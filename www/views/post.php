@@ -15,10 +15,10 @@
     <form method = "POST" action = '?action=post'>
         <h1> Créer un sujet de discussion
             <h3> Titre
-                <input type = "text" name = "post_title">
+            <input type = "text" name = "post_title">
             </h3>
             <h3> Message
-                <textarea type = "text" name = "post_content"></textarea>
+            <textarea type = "text" name = "post_content"></textarea>
             </h3>
         </h1>	
         <input type = "submit">
