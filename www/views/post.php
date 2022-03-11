@@ -4,7 +4,6 @@
         <li>
             <a href="?action=topic&id=<?= $post["id"] ?>">
                 <h3><?= $post["title"] ?></h3>
-                <p><?= $post["posted_at"]; ?></p>
             </a>
         </li>
     <?php } ?>

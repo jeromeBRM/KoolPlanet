@@ -16,9 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION["login"])) {
 
         try{
             $sql = $db->prepare(
-                'insert into `topic` values (null, ?, ?, ?, ?)'
+                'insert into `topic` values (null, ?, ?, ?, datetime(\'now\', \'localtime\'))'
                 );
-            $sql->execute(array($_SESSION["id"], $data["post_title"], $data["post_content"], date(DATE_ATOM, mktime(date('n',time()), date('j',time()), date('Y',time())))));
+            $sql->execute(array($_SESSION["id"], $data["post_title"], $data["post_content"]));
             
             $lastId = $db->lastInsertId();
 
