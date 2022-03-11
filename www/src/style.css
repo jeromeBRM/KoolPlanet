@@ -22,7 +22,24 @@ h3{
 a{
     text-decoration: none;
     color: #459A7D;
-    
+}
+
+li{
+    list-style: none;
+}
+
+
+button{
+    background: #54e695;
+    border: none;
+    cursor: pointer;
+    padding: 10px 24px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+button a {
+    color: var(--color-text);
 }
 
 form{
@@ -37,4 +54,10 @@ form{
 
 .header__info--login{
     color: green;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
