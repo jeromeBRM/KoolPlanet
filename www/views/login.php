@@ -1,9 +1,9 @@
 <form method="POST" action="?action=login">
 	<h1>Connexion
-		<h3>Login
+		<h3>Nom d'utilisateur
 			<input type="text" name="login">
 		</h3>
-		<h3>Password
+		<h3>Mot de passe
 			<input type="password" name="password">
 		</h3>
 	</h1>
