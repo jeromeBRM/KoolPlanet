@@ -6,10 +6,7 @@
         <?= $data["topic"]["content"] ?>
     </p>
     <div>
-        Posté par <?= $data["topic"]["login"] ?> 
-    </div>
-    <div>
-        <?= $data["topic"]["posted_at"] ?>
+        Posté par <?= $data["topic"]["login"] ?> le <?= $data["topic"]["posted_at"] ?>
     </div>
 </div>
 
