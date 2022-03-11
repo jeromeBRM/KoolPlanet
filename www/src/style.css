@@ -11,19 +11,21 @@ body {
     color: var(--color-text-primary);
     margin: 0%;
 }
+h1,h2,h3,h4,h5{
+    text-align: center;
+
+}
 
 h1{
-    text-align: center;
     font-size: 50px;
     color: var(--color-text);
 }
 h2{
     color: #459A7D;
-    text-align: center;
     font-size: 20px;
 }
 
-h3{
+h3,h6{
     font-size: 15px;
 }
 
@@ -35,6 +37,7 @@ a{
 li{
     list-style: none;
 }
+
 .banner__cover{
     background-image: url("../images/foret.jpg");
     background-size: cover;
@@ -55,27 +58,50 @@ button a {
     color: var(--color-text);
     font-size: 18px;
 }
+
+input[type="submit"]{
+    width: 12%;
+    margin-left: 20px;
+    background-color: #54e695;
+    border-color: #54e695;
+    color: #f9f9f9;
+    cursor: pointer;
+    padding: 5px 10px;
+    text-align: center;
+}
+
 button:focus:enabled, button:hover:enabled, input[type="submit"]:focus:enabled, input[type="submit"]:hover:enabled{
     background-color: #0addba;
     border-color: #0addba;
     color: #f9f9f9;
-    outline: 0; 
+    outline: 0;
+
+}
+
+textarea {
+    resize: none; 
+    width: 75%;
+    height: 250px;  
+}
+
+input{
+    width: 25%;
+    text-align: center;
 }
 
 textarea,input {
-    color: #4a4a4a;
     padding: 6px 10px;
     margin-bottom: 10px;
     background-color: #f1f1f1;
     border: 1px solid #f1f1f1;
     border-radius: 4px;
-    box-shadow: none;
-    box-sizing: border-box; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 textarea:focus, input:focus {
-      border: 1px solid #1d7484;
-      outline: 0;
+    border: 1px solid #0addba;
+    outline: 0;
 }
 
 form{

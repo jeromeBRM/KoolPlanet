@@ -3,7 +3,7 @@
     <?php foreach ($data["post_list"] as $post){ ?>
         <li>
             <a href="?action=topic&id=<?= $post["id"] ?>">
-                <h3><?= $post["title"] ?></h3>
+                <h6><?= $post["title"] ?></h3>
             </a>
         </li>
     <?php } ?>
