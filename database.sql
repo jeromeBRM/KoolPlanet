@@ -1,6 +1,6 @@
 create table user (
     id integer,
-    login varchar(255) not null,
+    login varchar(255) unique not null,
     password text not null,
     constraint pk_user primary key (id)
 );
