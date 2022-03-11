@@ -21,6 +21,7 @@
                             <button><a href="?action=login">Se connecter</a></button>
                         <?php } ?>
                         <?php if(isset($_SESSION["login"])) { ?>
+                            <button><a href="?action=user&id=<?= $_SESSION["id"] ?>">Mon profil</a></button>
                             <button><a href="?action=logout">Se déconnecter</a></button>
                         <?php } ?>
                     </ul>
