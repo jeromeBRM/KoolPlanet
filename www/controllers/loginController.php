@@ -18,20 +18,23 @@ if (isset($_POST["login"]) && isset($_POST["password"])){
 
     $user = $sql->fetch();
 
-    if($user != null){
-        if (password_verify($data["password"], $user["password"])){
-            $_SESSION["login"] = $data["login"];
-            $_SESSION["id"] = $user["id"];
-            $_SESSION["connected"] = true;
-            $data["result"] = "Vous êtes connecté(e).";
-        }
-        else{
-            $data["result"] = "Mot de passe incorrect.";
-        }
+    if($user == null){
+        $data["result"] = "L'utilisateur est introuvable.";
+    }
+    elseif(!password_verify($data["password"], $user["password"])){
+        $data["result"] = "Mot de passe incorrect.";
     }
     else{
-        $data["result"] = "L'utilisateur est introuvable.";
+        $_SESSION["login"] = $data["login"];
+        $_SESSION["id"] = $user["id"];
+        $data["result"] = "Vous êtes connecté(e).";
+        $connected = true;
     }
 }
 
-render("login", $data);
+if(isset($connected)){
+    require(__DIR__."/homeController.php");
+}
+else{
+    render("login", $data);
+}
