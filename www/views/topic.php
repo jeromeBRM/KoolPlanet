@@ -1,25 +1,25 @@
-<div>
+<article>
     <h1>
         <?= $data["topic"]["title"] ?>
     </h1>
     <p>
-        <?= $data["topic"]["content"] ?>
+        <?= nl2br($data["topic"]["content"]) ?>
     </p>
     <div>
         Posté par <?= $data["topic"]["login"] ?> le <?= $data["topic"]["posted_at"] ?>
     </div>
-</div>
+</article>
 
-<div>
 <?php foreach($data["replies"] as $reply){ ?>
+<article>
     <p>
-        <?= $reply["content"] ?>
+        <?= nl2br($reply["content"]) ?>
     </p>
     <div>
         Posté par <?= $reply["login"] ?> le <?= $reply["posted_at"] ?>
     </div>
+</article>
 <?php } ?>
-</div>
 
 <div>
     <?php if (isset($_SESSION["login"])) { ?>
