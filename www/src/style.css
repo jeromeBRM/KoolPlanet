@@ -20,7 +20,7 @@ h1{
 h2{
     color: #459A7D;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 h3{
@@ -54,6 +54,28 @@ button{
 button a {
     color: var(--color-text);
     font-size: 18px;
+}
+button:focus:enabled, button:hover:enabled, input[type="submit"]:focus:enabled, input[type="submit"]:hover:enabled{
+    background-color: #0addba;
+    border-color: #0addba;
+    color: #f9f9f9;
+    outline: 0; 
+}
+
+textarea,input {
+    color: #4a4a4a;
+    padding: 6px 10px;
+    margin-bottom: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box; 
+}
+
+textarea:focus, input:focus {
+      border: 1px solid #1d7484;
+      outline: 0;
 }
 
 form{
