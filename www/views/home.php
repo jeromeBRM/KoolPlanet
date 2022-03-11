@@ -6,7 +6,7 @@
 <ul>
     <?php foreach($data["username_list"] as $user){ ?>
         <li>
-            <?= $user["login"]; ?>
+            <a href="?action=user/"><?= $user["login"]; ?>
         </li>
     <?php } ?>
 </ul>

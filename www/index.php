@@ -28,4 +28,8 @@ $instance = new $class();
 $instance->$method();
 */
 
-require(__DIR__."/controllers/".$action."Controller.php");
+if (file_exists(__DIR__."/controllers/$action"."Controller.php")) {
+	require(__DIR__."/controllers/".$action."Controller.php");
+} else {
+	render($action);
+}

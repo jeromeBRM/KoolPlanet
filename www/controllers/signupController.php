@@ -17,7 +17,7 @@ if ($data["form_complete"]){
 
         try{
             $sql = $db->prepare(
-                'insert into `user` values (null, ?, ?)'
+                'insert into `user` values (null, ?, ?, null)'
                 );
             $sql->execute(array($data["login"], $hashedPassword));
             $data["result"] = "Vous êtes inscrit !";
