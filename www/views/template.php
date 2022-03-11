@@ -23,7 +23,7 @@
                         <li><a href="?action=logout">Se déconnecter</a></li>
                     <?php } ?>
                 </ul>
-                <h5 class="header__info--login"><?= isset($_SESSION["login"]) ? "Vous êtes connecté(e) sur le compte de " . $_SESSION["login"] . "." : ""; ?></h5>
+                <h4><?= isset($_SESSION["login"]) ? "Vous êtes connecté(e) sur le compte de " . $_SESSION["login"] . "." : ""; ?></h4>
             </nav>
         </header>
             <?= $content ?>
