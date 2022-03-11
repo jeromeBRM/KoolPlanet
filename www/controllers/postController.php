@@ -7,7 +7,7 @@ if ($data["form_complete"]){
     $data["form_complete"] = $_POST["post_title"] != "" && $_POST["post_content"] != "";
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION["connected"])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION["login"])) {
 
     if ($data["form_complete"]){
 
