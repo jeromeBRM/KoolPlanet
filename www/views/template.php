@@ -13,18 +13,19 @@
     <body>
         <header>
             <nav>
-                <div class = "banner__cover"><a href="?action=home"><h1>KoolPlanet</h1></a>
+                <div class = "banner__cover">
                     <ul class ="container">
-                        <button><a href="?action=post">Liste des sujets</a></button>
+                        <button><a href="?action=post">Les Topics</a></button>
                         <?php if(!isset($_SESSION["login"])) { ?>
-                            <button><a href="?action=signup">S'inscrire</a></button>
                             <button><a href="?action=login">Se connecter</a></button>
+                            <button class= "button__border"><a href="?action=signup">S'inscrire</a></button>
                         <?php } ?>
                         <?php if(isset($_SESSION["login"])) { ?>
                             <button><a href="?action=user&id=<?= $_SESSION["id"] ?>">Mon profil</a></button>
-                            <button><a href="?action=logout">Se déconnecter</a></button>
+                            <button class= "button__border"><a href="?action=logout">Se déconnecter</a></button>
                         <?php } ?>
                     </ul>
+                    <a href="?action=home"><h1>KoolPlanet</h1></a>
                     <h4><?= isset($_SESSION["login"]) ? "Vous êtes connecté(e) sur le compte de " . $_SESSION["login"] . "." : ""; ?></h4>
                 </div>
             </nav>
