@@ -13,7 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION["login"]) && isset(
     $maxSize = 400000;
     
     if(in_array($extension, $extensions) && $size <= $maxSize){
-        move_uploaded_file($tmpName, __DIR__.'../upload/avatar/user_'.$_SESSION["id"].'/'.$name);
+
+        if (!file_exists(__DIR__.'../../upload/avatar/user_'.$_SESSION["id"].'/')) {
+            mkdir(__DIR__.'../../upload/avatar/user_'.$_SESSION["id"].'/', 0777, true);
+        }
+
+        move_uploaded_file($tmpName, __DIR__.'../../upload/avatar/user_'.$_SESSION["id"].'/'.$name);
 
         try{
             $sql = $db->prepare(

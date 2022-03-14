@@ -1,6 +1,6 @@
 <h2>Profil de <?= $data["user"]["login"] ?></h2>
 
-<img width="100px" height="100px" src="<?= $data["user"]["avatar"] === "" ? $data["user"]["avatar"] : "https://st.depositphotos.com/1598598/4847/i/950/depositphotos_48475325-stock-photo-isolated-plane-tree-on-a.jpg" ?>">
+<img width="100px" height="100px" src="<?= $data["user"]["avatar"] == "" ? __DIR__.'../../upload/avatar/user_'.$data["user"]["id"].'/'.$data["user"]["avatar"] : "https://st.depositphotos.com/1598598/4847/i/950/depositphotos_48475325-stock-photo-isolated-plane-tree-on-a.jpg" ?>">
 
 <?php if ($data["current_user"]) { ?>
 <form method="post" enctype="multipart/form-data">
