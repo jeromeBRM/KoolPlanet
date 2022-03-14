@@ -24,7 +24,7 @@
 <div>
     <?php if (isset($_SESSION["login"])) { ?>
         <form method = "POST" action = '?action=topic&id=<?= $_GET["id"]?>'>
-            <h3>Répondre</h3>
+            <h4>Répondre</h4>
             <textarea type = "text" name = "reply_content"></textarea>
             <input type = "submit">
         </form>

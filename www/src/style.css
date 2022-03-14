@@ -11,20 +11,38 @@ body {
     color: var(--color-text-primary);
     margin: 0%;
 }
+h1,h3,h4,h5{
+    margin-left:  88.5833px;
+
+}
 
 h1{
-    text-align: center;
     font-size: 50px;
     color: var(--color-text);
-}
-h2{
-    color: #459A7D;
     text-align: center;
+}
+
+
+h3,h2{
+    color: #459A7D;
     font-size: 20px;
 }
 
-h3{
+h4,h6{
     font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+}
+
+h2{
+    text-align: center;
+    margin-left: unset;
+}
+
+
+ul{
+    padding: 0px;
+    gap: 10px;
 }
 
 a{
@@ -35,47 +53,79 @@ a{
 li{
     list-style: none;
 }
+
 .banner__cover{
-    background-image: url("../images/foret.jpg");
+    filter: grayscale(50%);
+    background-image:url("../images/foret.jpg");
+    /*background: linear-gradient(142deg, rgba(189,252,186,1) 0%, rgba(0,255,174,1) 100%);*/
     background-size: cover;
     padding: 9px;
+    height: 100vh;
+    background-position: center;
 }
 
 button{
-    background: #54e695;
+    background:transparent;
     border: none;
     cursor: pointer;
-    padding: 10px 24px;
+    padding: 10px 12px;
     text-align: center;
     border-radius: 30px;
-    font-family: 'Rubik';
+    font-weight: 600;
+}
+
+.button__border{
+    border: solid 2px white;
 }
 
 button a {
     color: var(--color-text);
-    font-size: 18px;
+    font-size: 12px;
 }
-button:focus:enabled, button:hover:enabled, input[type="submit"]:focus:enabled, input[type="submit"]:hover:enabled{
+
+button:focus:enabled, button:hover:enabled{
+    text-decoration: underline 2px;
+}
+
+input[type="submit"]{
+    background-color: #54e695;
+    border-color: #54e695;
+    color: #f9f9f9;
+    cursor: pointer;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+input[type="submit"]:focus:enabled, input[type="submit"]:hover:enabled{
     background-color: #0addba;
     border-color: #0addba;
     color: #f9f9f9;
-    outline: 0; 
+    outline: 0;
 }
 
+textarea {
+    resize: none; 
+    width: 75%;
+    height: 250px;  
+}
+
+input{
+    width: 100%;
+}
+
+
 textarea,input {
-    color: #4a4a4a;
     padding: 6px 10px;
+    margin-top: 10px;
     margin-bottom: 10px;
     background-color: #f1f1f1;
     border: 1px solid #f1f1f1;
     border-radius: 4px;
-    box-shadow: none;
-    box-sizing: border-box; 
 }
 
 textarea:focus, input:focus {
-      border: 1px solid #1d7484;
-      outline: 0;
+    border: 1px solid #0addba;
+    outline: 0;
 }
 
 form{
@@ -95,5 +145,28 @@ form{
 .container{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
+
 }
+
+.container_topic{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: 10px;
+    align-items: baseline;
+}
+
+.container__identification{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    margin: auto;
+}
+
+.item {
+    flex-grow: 2;
+}
+
+

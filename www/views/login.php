@@ -1,12 +1,10 @@
 <form method="POST" action="?action=login">
-	<h2>Connexion
-		<h3>Nom d'utilisateur
+	<h2 class = "container__identification">Connexion
+		<h4>Nom d'utilisateur</h4>
 			<input type="text" name="login">
-		</h3>
-		<h3>Mot de passe
+		<h4>Mot de passe</h4>
 			<input type="password" name="password">
-		</h3>
 	</h2>
 	<p><?= $data["result"]; ?></p>
-	<input type="submit">
+	<input type="submit" value = "Connexion">
 </form>

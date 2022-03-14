@@ -1,25 +1,29 @@
-<p> Liste des sujets :</p>
-<ul>
-    <?php foreach ($data["post_list"] as $post){ ?>
-        <li>
-            <a href="?action=topic&id=<?= $post["id"] ?>">
-                <h3><?= $post["title"] ?></h3>
-            </a>
-        </li>
+<h2>Topics</h2>
+<div class="container_topic">
+    <div> 
+        <p> Liste des topics :</p>
+        <ul>
+            <?php foreach ($data["post_list"] as $post){ ?>
+                <li>
+                    <a href="?action=topic&id=<?= $post["id"] ?>">
+                        <h6><?= $post["title"] ?></h3>
+                    </a>
+                </li>
+            <?php } ?>
+        </ul>
+    </div>
+    <?php if (isset($_SESSION["login"])){ ?>
+    <div class = "item">
+        <form method = "POST" action = '?action=post'>
+            <h3> Créer un topic
+                <h4>Titre</h4>
+                <input type = "text" name = "post_title">
+                <h4>Message</h4>
+                <textarea type = "text" name = "post_content"></textarea>
+            </h3>	
+            <input type = "submit">
+            <p><?= $data["result"]; ?></p>
+        </form>
+    </div>
     <?php } ?>
-</ul>
-
-<?php if (isset($_SESSION["login"])){ ?>
-<div>
-    <form method = "POST" action = '?action=post'>
-        <h2> Créer un sujet de discussion
-            <h3>Titre</h3>
-            <input type = "text" name = "post_title">
-            <h3>Message</h3>
-            <textarea type = "text" name = "post_content"></textarea>
-        </h2>	
-        <input type = "submit">
-        <p><?= $data["result"]; ?></p>
-    </form>
 </div>
-<?php } ?>

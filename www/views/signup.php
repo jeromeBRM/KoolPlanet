@@ -1,15 +1,12 @@
 <form method = "POST" action = '?action=signup'>
-	<h2> Inscription
-		<h3> Pseudo
+	<div class = "container__identification">
+		<p> Pseudo </p>
 			<input type = "text" name = "login">
-		</h3>
-		<h3>Mot de passe
+		<p>Mot de passe</p>
 			<input type = "password" name = "password">
-		</h3>
-		<h3> Confirmer votre mot de passe
+		<p> Confirmer le mot de passe</p>
 			<input type = "password" name = "confirmation">
-		</h3>
-	</h2>	
-    <input type = "submit">
+    	<input type = "submit" value = "Inscription">
+	</div>	
     <p><?php echo $data["result"]; ?></p>
 </form>
