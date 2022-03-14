@@ -11,13 +11,9 @@ body {
     color: var(--color-text-primary);
     margin: 0%;
 }
-h1,h3,h4,h5{
-    margin-left:  88.5833px;
-
-}
 
 h1{
-    font-size: 50px;
+    font-size: 150px;
     color: var(--color-text);
     text-align: center;
 }
@@ -55,7 +51,6 @@ li{
 }
 
 .banner__cover{
-    filter: grayscale(50%);
     background-image:url("../images/foret.jpg");
     /*background: linear-gradient(142deg, rgba(189,252,186,1) 0%, rgba(0,255,174,1) 100%);*/
     background-size: cover;
