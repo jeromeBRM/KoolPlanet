@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION["login"]) && isset(
                 '
                 update user
                 set avatar = ?
-                where id = ? limit 1
+                where id = ?
                 '
                 );
             $sql->execute(array($name, $_SESSION["id"]));
