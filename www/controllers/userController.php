@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION["login"]) && isset(
 try{
     $sql = $db->prepare(
         '
-        select id, login, avatar from `user`
+        select id, login, avatar, registration_date from `user`
         where `user`.id = ? limit 1
         '
         );
