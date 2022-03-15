@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION["login"]) && isset(
     $tabExtension = explode('.', $name);
     $extension = strtolower(end($tabExtension));
     
-    $maxSize = 400000;
+    $maxSize = 1000000;
     
     if(in_array($extension, $extensions) && $size <= $maxSize){
 
