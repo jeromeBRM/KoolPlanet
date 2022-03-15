@@ -3,6 +3,8 @@ create table user (
     login varchar(255) unique not null,
     password text not null,
     avatar varchar(255),
+    description text,
+    registration_date date not null,
     constraint pk_user primary key (id)
 );
 
