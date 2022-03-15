@@ -51,13 +51,15 @@ li{
 }
 
 .banner__cover{
-    background-image:url("../images/foret.jpg");
+    background-clip:url("../images/foret.mp4") ;
+    /*background-image:url("../images/foret.jpg");*/
     /*background: linear-gradient(142deg, rgba(189,252,186,1) 0%, rgba(0,255,174,1) 100%);*/
     background-size: cover;
     padding: 9px;
     height: 100vh;
     background-position: center;
 }
+
 
 button{
     background:transparent;
@@ -141,8 +143,21 @@ form{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-
+    z-index:  10;
 }
+
+
+#myVideo {
+    position: absolute;
+    height: 80vh;
+    width: 100vw;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+
 
 .container_topic{
     display: flex;
