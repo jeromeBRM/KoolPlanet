@@ -23,9 +23,9 @@
 </article>
 <?php } ?>
 
-<div>
+<div class = "container__post" >
     <?php if (isset($_SESSION["login"])) { ?>
-        <form method = "POST" action = '?action=topic&id=<?= $_GET["id"]?>'>
+        <form class = "form__input" method = "POST" action = '?action=topic&id=<?= $_GET["id"]?>'>
             <h4>Répondre</h4>
             <textarea type = "text" name = "reply_content"></textarea>
             <input type = "submit">

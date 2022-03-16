@@ -50,15 +50,15 @@ li{
     list-style: none;
 }
 
-.banner__cover{
+/*.banner__cover{
     background-clip:url("../images/foret.mp4") ;
-    /*background-image:url("../images/foret.jpg");*/
-    /*background: linear-gradient(142deg, rgba(189,252,186,1) 0%, rgba(0,255,174,1) 100%);*/
+    background-image:url("../images/foret.jpg");
+    background: linear-gradient(142deg, rgba(189,252,186,1) 0%, rgba(0,255,174,1) 100%);
     background-size: cover;
     padding: 9px;
     height: 100vh;
     background-position: center;
-}
+*/
 
 
 button{
@@ -100,18 +100,17 @@ input[type="submit"]:focus:enabled, input[type="submit"]:hover:enabled{
     outline: 0;
 }
 
-textarea {
+textarea{
     resize: none; 
-    width: 75%;
+}
+
+#textarea1 {
+    width: 100%;
     height: 250px;  
 }
 
-input{
-    width: 100%;
-}
-
-
 textarea,input {
+    font-family: 'Rubik', sans-serif;
     padding: 6px 10px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -162,10 +161,11 @@ form{
 .container_topic{
     display: flex;
     flex-direction: row;
-    gap: 50px;
-    margin-left: 10px;
+    gap: 25%;
+    margin-left: 50px;
     align-items: baseline;
 }
+
 
 .container__identification{
     display: flex;
@@ -175,8 +175,21 @@ form{
     margin: auto;
 }
 
-.item {
+.container__post{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-top: 10%;
+    width: 400px;
+
+}
+
+.form__wrapper {
     flex-grow: 2;
+    width: 400px;
+}
+.form__input{
+    width: inherit;
 }
 
 

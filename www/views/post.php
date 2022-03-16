@@ -13,13 +13,13 @@
         </ul>
     </div>
     <?php if (isset($_SESSION["login"])){ ?>
-    <div class = "item">
-        <form method = "POST" action = '?action=post'>
+    <div class = "form__wrapper">
+        <form class = "form__input" method = "POST" action = '?action=post'>
             <h3> Créer un topic
                 <h4>Titre</h4>
                 <input type = "text" name = "post_title">
                 <h4>Message</h4>
-                <textarea type = "text" name = "post_content"></textarea>
+                <textarea id="textarea1" type = "text" name = "post_content"></textarea>
             </h3>	
             <input type = "submit">
             <p><?= $data["result"]; ?></p>
