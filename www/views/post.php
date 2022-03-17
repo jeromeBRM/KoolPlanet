@@ -2,15 +2,17 @@
 <div class="container_topic">
     <div> 
         <p> Liste des topics :</p>
-        <ul>
-            <?php foreach ($data["post_list"] as $post){ ?>
-                <li>
-                    <a href="?action=topic&id=<?= $post["id"] ?>">
-                        <h6><?= $post["title"] ?></h3>
-                    </a>
-                </li>
-            <?php } ?>
-        </ul>
+            <ul>
+                <?php foreach ($data["post_list"] as $post){ ?>
+                    <li>
+                    <div class ="div__topic">
+                        <a href="?action=topic&id=<?= $post["id"] ?>">
+                            <p><?= $post["title"] ?></p>
+                        </a>
+                    </div>
+                    </li>
+                <?php } ?>
+            </ul>
     </div>
     <?php if (isset($_SESSION["login"])){ ?>
     <div class = "form__wrapper">

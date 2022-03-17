@@ -30,8 +30,11 @@
                     <h4><?= isset($_SESSION["login"]) ? "Vous êtes connecté(e) sur le compte de " . $_SESSION["login"] . "." : ""; ?></h4>
             </nav>
         </header>
+        <main>
             <?= $content ?>
+        </main>
         <footer>
+            <p> KoolPlanet </p>
             <p>© Bosphore Braëms Forestier <?php echo date("Y"); ?></p>
         </footer>
     </body>

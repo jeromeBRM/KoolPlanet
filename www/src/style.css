@@ -145,6 +145,18 @@ form{
     z-index:  10;
 }
 
+main{
+    margin: auto;
+    width: 720px;
+}
+
+footer{
+    background: rgb(133,198,135);
+    background: linear-gradient(90deg, rgba(133,198,135,1) 0%, rgba(74,163,141,1) 100%);
+    color: var(--color-primary-contrast);
+    padding: 20px;
+    margin-top: 60px;
+}
 
 #myVideo {
     position: absolute;
@@ -160,10 +172,10 @@ form{
 
 .container_topic{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 25%;
-    margin-left: 50px;
-    align-items: baseline;
+    width: 100%;
+
 }
 
 
@@ -178,10 +190,43 @@ form{
 .container__post{
     display: flex;
     flex-direction: column;
-    align-items: baseline;
-    margin-top: 10%;
-    width: 400px;
+    margin-top: 30px;
+}
 
+.div__topic{
+    background: white;
+    box-shadow: 0px 0px 8px #00000014;
+    padding: 4px 30px;
+    border-radius: 14px;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.div__post{
+    background: white;
+    box-shadow: 0px 0px 8px #00000014;
+    padding: 14px 30px;
+    border-radius: 14px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.div__post__title{
+    display: flex;
+    flex-direction: row;
+    background: #f1f1f1d5;
+    box-shadow: 0px 0px 8px #00000014;
+    padding: 14px 30px;
+    border-radius: 14px;
+    font-size: 15px;
+}
+
+.article__post{
+    display: flex;
+    flex-direction: row;
+}
+.p__article{
+    font-size: 9px;
 }
 
 .form__wrapper {
@@ -189,7 +234,7 @@ form{
     width: 400px;
 }
 .form__input{
-    width: inherit;
+    margin-top: 50px;
 }
 
 
