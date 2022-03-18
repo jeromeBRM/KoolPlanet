@@ -1,6 +1,11 @@
 <?php
 
 $data["form_complete"] = isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["confirmation"]);
+
+if ($data["form_complete"]){
+    $data["form_complete"] = $_POST["login"] != "" && $_POST["password"] != "" && $_POST["confirmation"] != "";
+}
+
 $data["result"] = "";
 
 if ($data["form_complete"]){

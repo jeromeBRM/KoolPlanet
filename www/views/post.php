@@ -7,7 +7,7 @@
                     <li>
                     <div class ="div__topic">
                         <a href="?action=topic&id=<?= $post["id"] ?>">
-                            <p><?= $post["title"] ?></p>
+                            <p><?= htmlspecialchars($post["title"]) ?></p>
                         </a>
                     </div>
                     </li>

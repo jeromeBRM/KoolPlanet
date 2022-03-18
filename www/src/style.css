@@ -19,7 +19,7 @@ h1{
 }
 
 
-h3,h2{
+h3{
     color: #459A7D;
     font-size: 20px;
 }
@@ -32,7 +32,10 @@ h4,h6{
 
 h2{
     text-align: center;
-    margin-left: unset;
+    color: black;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 400;
 }
 
 
@@ -49,17 +52,6 @@ a{
 li{
     list-style: none;
 }
-
-/*.banner__cover{
-    background-clip:url("../images/foret.mp4") ;
-    background-image:url("../images/foret.jpg");
-    background: linear-gradient(142deg, rgba(189,252,186,1) 0%, rgba(0,255,174,1) 100%);
-    background-size: cover;
-    padding: 9px;
-    height: 100vh;
-    background-position: center;
-*/
-
 
 button{
     background:transparent;
@@ -213,12 +205,16 @@ footer{
 
 .div__post__title{
     display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+.div__post__topic{
+    display: flex;
     flex-direction: row;
-    background: #f1f1f1d5;
-    box-shadow: 0px 0px 8px #00000014;
     padding: 14px 30px;
     border-radius: 14px;
     font-size: 15px;
+    margin-top: 10px;
 }
 
 .article__post{
@@ -227,6 +223,7 @@ footer{
 }
 .p__article{
     font-size: 9px;
+    font-style: italic;
 }
 
 .form__wrapper {
