@@ -12,8 +12,9 @@
     </head>
     <body>
         <header>
-            <video id= "myVideo" autoplay loop muted playsinline>
+            <video id="video" autoplay loop muted playsinline>
                 <source src="../video/foret.mp4" type="video/mp4"></video>
+            <div id= "myVideo" >
             <nav>
                     <ul class = "container">
                         <button><a href="?action=post">Les Topics</a></button>
@@ -29,6 +30,7 @@
                     <a href="?action=home"><h1>KoolPlanet</h1></a>
                     <h4><?= isset($_SESSION["login"]) ? "Vous êtes connecté(e) sur le compte de " . $_SESSION["login"] . "." : ""; ?></h4>
             </nav>
+            </div>
         </header>
         <main>
             <?= $content ?>
