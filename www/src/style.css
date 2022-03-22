@@ -155,26 +155,22 @@ footer{
     height: auto;
     width: 100%;
     top: 0;
-    z-index: 1;
 }
 
 #video{
+    position: inherit;
     width: 100vw;
-    height: 500px;
+    height: 550px;
     object-fit: cover;
     left: 0;
     top: 0;
-    right: 0;
     bottom: 0;
+    right: 0;
+    margin-bottom: 40px;
     z-index: -1;
+
 }
 
-video{
-    position: inherit;
-    width: 100vw;
-    height: auto;
-    margin-bottom: 40px;
-}
 
 .container_topic{
     display: flex;
