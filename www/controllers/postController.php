@@ -16,9 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION["login"])) {
 
         try{
             $sql = $db->prepare(
-                'insert into `topic` values (null, ?, ?, ?, datetime(\'now\', \'localtime\'))'
+                'insert into `topic` values (null, ?, ?, ?, ?, datetime(\'now\', \'localtime\'))'
                 );
-            $sql->execute(array($_SESSION["id"], $data["post_title"], $data["post_content"]));
+            $sql->execute(array($_SESSION["id"], explode('#', $_POST["topic_tag_query"])[1], $data["post_title"], $data["post_content"]));
             
             $lastId = $db->lastInsertId();
 
@@ -35,7 +35,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION["login"])) {
 
 unset($_POST);
 
-$sql = $db->query("select id, title, content, posted_at from `topic`");
+$sql = $db->query('
+    select `topic`.id, `tag`.label, title, content, posted_at
+    from `topic`
+    left join `tag`
+    on `topic`.tag_id = `tag`.id
+    ');
 $posts = $sql->fetchAll();
 
 $sql = $db->query("select id, label from `tag`");

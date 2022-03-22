@@ -19,6 +19,7 @@
                     <div class ="div__topic">
                         <a href="?action=topic&id=<?= $post["id"] ?>">
                             <p><?= htmlspecialchars($post["title"]) ?></p>
+                            <p><?= $post["label"] ?></p>
                         </a>
                     </div>
                     </li>
