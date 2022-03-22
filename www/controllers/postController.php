@@ -38,6 +38,10 @@ unset($_POST);
 $sql = $db->query("select id, title, content, posted_at from `topic`");
 $posts = $sql->fetchAll();
 
+$sql = $db->query("select id, label from `tag`");
+$tags = $sql->fetchAll();
+
 $data["post_list"] = $posts;
+$data["tags"] = $tags;
 
 render("post", $data);
