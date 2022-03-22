@@ -36,4 +36,4 @@ create table tag (
 );
 
 insert into tag (label)
-values ("Tuto"),("Photographie"),("Idée"),("Discussion"),("-18");
+values ("Discussion"), ("Tuto"), ("Photographie"), ("-18");
