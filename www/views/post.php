@@ -6,11 +6,12 @@
             <input type = "text" name = "topic_title_query">
             <h4>Filtrer par tag</h4>
             <select name="topic_tag_query">
+                <option value=<?= "all" ?>>Tout</option>
                 <?php foreach ($data["tags"] as $tag){ ?>
                     <option value=<?= "tag#".$tag["id"] ?>><?= $tag["label"] ?></option>
                 <?php } ?>
             </select>
-            <input type = "submit" value="Filtrer">
+            <input type = "submit" value="Rechercher">
         </form>
         <p> Liste des topics :</p>
             <ul>

@@ -7,6 +7,8 @@ if ($data["form_complete"]){
     $data["form_complete"] = $_POST["post_title"] != "" && $_POST["post_content"] != "";
 }
 
+// création d'un nouveau topic
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION["login"])) {
 
     if ($data["form_complete"]){
@@ -33,15 +35,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION["login"])) {
     }
 }
 
-unset($_POST);
+// fetch les topics avec filtrage
+
+$topic_title_filter = "1=1";
+$topic_tag_filter = "1=1";
+
+if (isset($_POST["topic_title_query"]) && isset($_POST["topic_tag_query"])){
+    if ($_POST["topic_title_query"] != ""){
+        $topic_title_filter = 'title like "%'.$_POST["topic_title_query"].'%"';
+    }
+    if ($_POST["topic_tag_query"] != "all"){
+        $topic_tag_filter = "`topic`.tag_id = ".explode('#', $_POST["topic_tag_query"])[1];
+    }
+}
 
 $sql = $db->query('
     select `topic`.id, `tag`.label, title, content, posted_at
     from `topic`
     left join `tag`
     on `topic`.tag_id = `tag`.id
+    where '.$topic_title_filter.' and '.$topic_tag_filter.'
     ');
 $posts = $sql->fetchAll();
+
+unset($_POST);
 
 $sql = $db->query("select id, label from `tag`");
 $tags = $sql->fetchAll();
