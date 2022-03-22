@@ -11,11 +11,13 @@ create table user (
 create table topic (
     id integer,
     author_id integer not null,
+    tag_id integer not null,
     title text unique not null,
     content text not null,
     posted_at datetime not null,
     constraint pk_post primary key (id),
-    constraint fk_author foreign key (author_id) references user(id)
+    constraint fk_author foreign key (author_id) references user(id),
+    constraint fk_tag foreign key (tag_id) references tag(id)
 );
 
 create table reply (
