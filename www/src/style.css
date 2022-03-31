@@ -135,6 +135,7 @@ form{
     flex-direction: row;
     justify-content: flex-end;
     z-index:  10;
+    margin-right: 10px;
 }
 
 main{
@@ -159,7 +160,7 @@ footer{
 
 #video{
     position: inherit;
-    width: 100vw;
+    width: 100%;
     height: 550px;
     object-fit: cover;
     left: 0;

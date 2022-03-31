@@ -28,7 +28,6 @@
             </ul>
     </div>
     <?php if (isset($_SESSION["login"])){ ?>
-    <div class = "form__wrapper">
         <form class = "form__input" method = "POST" action = '?action=post'>
             <h3>Créer un topic</h3>
             <h4>Tag</h4>
@@ -44,6 +43,5 @@
             <input type = "submit">
             <p><?= $data["result"]; ?></p>
         </form>
-    </div>
     <?php } ?>
 </div>
